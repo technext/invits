@@ -1,0 +1,46 @@
+// Overly
+.gift-overly {
+    position: relative;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        content: "";
+        background-repeat: no-repeat;
+        @extend %gift;
+    }
+}
+
+.gift-area{
+    background-size: cover;
+    background-repeat: no-repeat;
+    .gift-caption{
+        h2{
+            font-size: 70px;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: $heading-color;
+            font-family: $font_1;
+            line-height: 1.2;
+            text-transform: capitalize;
+            margin-bottom: 14px;
+            @media #{$xs}{
+                font-size: 44px;
+                margin-bottom: 27px;
+            }
+        }
+        p{
+            color: $heading-color;
+            font-size: 30px;
+            margin-bottom: 60px;
+            line-height: 1.3;
+            @media #{$xs}{
+                font-size: 18px;
+            }
+        }
+    }
+}

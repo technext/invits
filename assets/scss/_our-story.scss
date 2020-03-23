@@ -1,0 +1,106 @@
+.Our-story-area{
+    position: relative;
+    .story-img{
+
+        position: relative;
+        margin-left: 40px;
+        @media #{$sm}{
+            margin-left: 0px;
+            margin-bottom: 50px;
+        } 
+        @media #{$xs}{
+            margin-left: 0px;
+            margin-bottom: 50px;
+        }
+        .story-imges{
+            width: 100%;
+        }
+        .shape-flower-img{
+            @media #{$xs}{
+                display: none;
+            }
+            .flower-top{
+                position: absolute;
+                bottom: -79px;
+                left: -71px;
+                
+            }
+        }
+    }
+    .story-caption{
+        padding-left: 48px;
+        padding-right: 45px;
+        padding-top: 48px;
+        @media #{$laptop}{
+            padding-left: 20px;
+            padding-right: 0;
+            padding-top: 48px;
+        }  
+         @media #{$lg}{
+            padding-left: 20px;
+            padding-right: 0;
+            padding-top: 20px;
+        }
+        @media #{$md}{
+            padding-left: 0px;
+            padding-right: 0;
+            padding-top: 0px;
+        }
+        @media #{$sm}{
+            padding-left: 0px;
+            padding-right: 0;
+            padding-top: 0px;
+            padding-top: 0px;
+        }
+        @media #{$xs}{
+            padding-left: 0px;
+            padding-right: 0;
+            padding-top: 0px;
+        }
+        img{
+            margin-bottom: 10px;
+        }
+        h3{
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: $heading-color;
+            font-family: $font_1;
+            line-height: 1.2;
+            text-transform: uppercase;
+            margin-bottom: 44px;
+            @media #{$lg}{
+                margin-bottom: 10px;
+            }
+        }
+        .story1{
+            margin-bottom: 35px;
+            @media #{$lg}{
+                margin-bottom: 10px;
+            }
+           
+        }
+        .story2{
+
+        }
+        .story3{
+
+        }
+    }
+    // shape
+    .shape-flower{
+        .flower1{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+           
+        }
+        .flower2{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

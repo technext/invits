@@ -1,0 +1,148 @@
+.footer-area{
+
+    .footer-logo{
+        margin-bottom:30px;
+    }
+    .footer-pera{
+         .info1{
+            line-height: 1.8;
+            margin-bottom: 30px;
+            padding-right: 5px;
+        }.info2{
+            margin-bottom: 0;
+        } 
+        &.footer-pera2 p{
+            line-height: 1.9;
+            padding: 0;
+        }
+    }
+    .footer-tittle{
+        & h4{
+            color: $heading-color;
+            font-family:$font_2;
+            font-size: 18px;
+            margin-bottom: 38px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        & ul{
+            & li{
+                color: #012f5f;
+                margin-bottom: 15px;
+                text-transform: capitalize;
+                & a{
+                    color: #868c98;
+                    font-weight: 300;
+                    &:hover{
+                        color: $theme-color;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .footer-form{
+        margin-top: 40px;
+        & form{
+            position: relative;
+            & input{
+                width: 100%;
+                height: 43px;
+                padding: 10px 20px;
+                border: 0;
+                border-bottom: 1px solid #fff;
+            }
+            & .form-icon{
+                & button{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: none;
+                    border: 0;
+                    cursor: pointer;
+                    padding: 13px 22px;
+                    background:$theme-color;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    .info.error {
+        color:  $theme-color;
+    }
+    .footer-social{
+        & a{
+            width: 40px;
+            height: 40px;
+            font-size: 14px;
+            border: 1px solid#fafafa;
+            background:#fafafa;
+            display: inline-block;
+            line-height: 40px;
+            text-align: center;
+            color:#949eb2;
+            margin-right: 5px;
+            @include transition(.4s);
+           
+        }
+    }
+    // Instagram
+
+    .insta-feed{
+        padding-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+    
+        li {
+            width: 33.33%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+   
+
+}
+.footer-social{
+   a:hover {
+    background: $theme-color;
+    i{
+        color: #fff;
+        @include transition(.4s);
+    }
+    }
+}
+//copy Right 
+.footer-bottom-area {
+    .footer-border{
+         border-top: 1px solid #dddddd;
+        padding: 33px 0px 33px;
+        @media #{$md}{
+            padding: 0px 0px 20px;
+        } @media #{$xs}{
+            padding: 0px 0px 20px;
+        }
+    }
+    .footer-copy-right{
+        & p{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 2;
+            margin: 0;
+            & i{
+                color:$theme-color;
+            }
+            & a{
+                color: #7b40c0;
+                &:hover{
+                   color: $theme-color;
+                }
+                 
+            }
+        }
+    }
+}
+.footer-bg{
+    background: #f9f7f4;
+}
+

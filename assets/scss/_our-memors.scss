@@ -1,0 +1,124 @@
+// section Tittle
+.section-tittle{
+    & h2{
+        color: $heading_color;
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 66px;
+        line-height: 1.3;
+        text-transform: uppercase;
+        @media #{$xs}{
+			font-size: 39px;
+            line-height: 1.3;
+		}
+    }
+}
+.section-tittle.tittle-form{
+    img{
+        @include transition(.6s);
+        position: relative;
+        top: -35px;
+    }
+    & h2{
+        font-size: 40px;
+        @media #{$md}{
+			font-size: 34px;
+            line-height: 1.3;
+		}
+        @media #{$xs}{
+			font-size: 34px;
+            line-height: 1.3;
+		}
+    }
+}
+
+.our-memories-area{
+    position: relative;
+    .memory{
+        @include transition(.4s);
+        .memories-img{
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                background-color: rgba(0,0,0,0.6);
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+                opacity: 0;
+                visibility: hidden;
+                background-repeat: no-repeat;
+                @include transition(.4s);
+            }
+            img{
+                width: 100%;
+            }
+            .menorie-icon {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                font-weight: 800;
+              
+                i{
+                    color:#fff;
+                    font-size: 20px;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 35px;
+                    border: 2px solid#fff;
+                    font-weight: 800;
+                    cursor: pointer;
+                    position: relative;
+                    z-index: 2;
+                    display: inline-block;
+                    border-radius: 50%;
+                    opacity: 0;
+                    visibility: hidden;
+                   @include transition(.4s);
+                   transform: scale(0);
+                }
+            }
+        }
+    }
+    // Shape Img
+    .memories-shape{
+        .memories-shape1{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+        .memories-shape2{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+    }
+}
+.memory:hover {
+    padding: 10px;
+    .memories-img::before{
+        opacity: 1;
+        visibility: visible;
+    }
+    .memories-img{
+        .menorie-icon {
+            i{
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+           
+        }
+    }
+    
+}

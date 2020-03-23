@@ -1,0 +1,265 @@
+
+.slider-height {
+    max-height: 940px;
+    height: 940px;
+    background-repeat:no-repeat ;
+    background-position: center center;
+    background-size: cover;
+    @media #{$laptop}{
+        height: 800px;
+    }
+    @media #{$lg}{
+        height: 750px;
+    }
+    @media #{$md}{
+        height: 560px;
+    }
+    @media #{$sm}{
+        height: 400px;
+    }
+    @media #{$xs}{
+        height: 400px;
+    }
+}
+
+.slider-area{
+   //margin-top: -1px;
+    .hero__caption{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            background-image: url(../img/hero/hero_circle.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 540px;
+            height: 540px;
+            z-index: -1;
+            @media #{$lg}{
+                width: 450px;
+                height: 450px;
+            }
+            @media #{$md}{
+                width: 350px;
+                height: 350px;
+            }
+            @media #{$sm}{
+                width: 250px;
+                height: 250px;
+            }
+            @media #{$xs}{
+                width: 220px;
+                height: 220px;
+            }
+
+            // Animation
+            -webkit-animation-name: rotateme;
+            animation-name: rotateme;
+            -webkit-animation-duration: 30s;
+            animation-duration: 30s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+
+        // To to End
+        @keyframes rotateme {
+            from {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes rotateme {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        }
+        &.caption-bg{
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 540px;
+            width: 540px;
+        }
+        .circle-caption{
+            margin: auto;
+            @media #{$lg}{
+                margin: 0;
+                padding-left: 58px;
+            }
+            @media #{$md}{
+                margin: 0;
+                padding-left: 65px;
+            }
+            @media #{$sm}{
+                margin: 0;
+                padding-left: 35px;
+            }
+            @media #{$xs}{
+                margin: 0;
+                padding-left: 22px;
+            }
+            & span{
+                color: #fff;
+                text-transform: uppercase;
+                font-size:23px;
+                font-family: $font_2;
+                position: relative;
+                margin-bottom: 20px;
+                display: inline-block;
+                @media #{$sm}{
+                    font-size:18px;
+                    margin-bottom: 7px;
+                }
+                @media #{$xs}{
+                    font-size:18px;
+                    margin-bottom: 7px;
+                }
+                &::before{
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    left: -76px;
+                    width: 57px;
+                    height: 2px;
+                    background:#fff;
+                    display: inline-block;
+                    @media #{$sm}{
+                       display: none;
+                    }
+                    @media #{$xs}{
+                       display: none;
+                    }
+                } 
+                &::after{
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    right:-76px;
+                    width: 57px;
+                    height: 2px;
+                    background:#fff;
+                    display: inline-block;
+                    @media #{$sm}{
+                        display: none;
+                     }
+                    @media #{$xs}{
+                        display: none;
+                     }
+                }
+            }
+            & h1{
+                font-size: 65px;
+                font-weight: 700;
+                margin-bottom: 14px;
+                color: #fff;
+                font-family: $font_1;
+                line-height: 1.2;
+                text-transform: capitalize;
+                margin-bottom: 30px;
+                @media #{$lg}{
+                    font-size: 50px;
+                    line-height: 1.2;
+                }
+                @media #{$md}{
+                    font-size: 34px;
+                    line-height: 1.2;
+                    margin-bottom: 10px;
+                }
+                @media #{$sm}{
+                    font-size: 30px;
+                    line-height: 1.4;
+                    margin-bottom: 8px;
+                }
+                @media #{$xs}{
+                    font-size: 27px;
+                    line-height: 1.4;
+                    margin-bottom: 8px;
+                }
+            }
+            & p{
+               color: #fff;
+               text-transform: uppercase;
+               font-size: 23px;
+               @media #{$md}{
+                    font-size: 15px;
+                }
+               @media #{$sm}{
+                    font-size: 15px;
+                }
+               @media #{$xs}{
+                    font-size: 13px;
+                }
+            }
+        }
+
+        
+    }
+    .hero__img img {
+        max-width: 584px;
+        max-height: 607px;
+        @media #{$lg}{
+            max-width: 386px;
+		}
+    }
+}
+
+// Overly
+.hero-overly {
+    position: relative;
+    z-index: 0;
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        background-repeat: no-repeat;
+    }
+}
+
+
+// Another Hero Page
+.slider-area{
+    .hero-cap{
+        position: relative;
+        z-index: 1;
+        & h2{
+            color: #fff;
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.slider-height2{
+    min-height: 400px;
+    background-repeat:no-repeat ;
+    background-position: center center;
+    background-size: cover;
+    @media #{$xs}{
+        min-height: 360px;
+    }
+}
+// services page
+.services-area{
+    padding-top: 270px;
+}
+
+.header2{
+    background: #fbf7f3;
+}
+

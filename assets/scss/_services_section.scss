@@ -1,0 +1,112 @@
+
+.service-area{
+    background: #fefcfa;
+
+    // inner padding
+    padding-top:170px;
+    padding-bottom:110px;
+    @media #{$laptop}{
+        padding-top:170px;
+        padding-bottom:110px;
+    }
+    @media #{$lg}{
+        padding-top:140px;
+        padding-bottom:85px;
+    }
+    @media #{$md}{
+        padding-top:140px;
+        padding-bottom:85px;
+    }
+    @media #{$sm}{
+        padding-top:70px;
+        padding-bottom:0px;
+    }
+    @media #{$xs}{
+        padding-top:70px;
+        padding-bottom:0px;
+    }
+
+    .col-lg-4:nth-child(3) .singl-services::before {display: none;}
+    .singl-services{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: -17px;
+            width: 2px;
+            height: 75px;
+            background: #e09513;
+            transform:translateY(-50%);
+            @media #{$xs}{
+                display: none;
+            }
+            @media #{$sm}{
+                display: none;
+            } 
+            @media #{$md}{
+                display: none;
+            }
+         }
+       
+        .top-caption{
+            h4{
+                color: $heading_color;
+                font-size: 35px;
+                font-weight:400;
+                line-height: 1.2;
+            }
+            p{
+                font-family: $font_1;
+                color: #362d2b;
+                font-size: 20px;
+                margin-bottom: 54px;
+            }
+        }
+        .services-img{
+            position: relative;
+            z-index: 0;
+            img{
+                position: relative;
+                margin-bottom: 43px;
+                border: 10px solid rgba(255, 255, 255,.8);
+                border-radius: 50%;
+            }
+            .back-flower{
+                position: absolute;
+                right: 45px;
+                bottom: 0;
+                z-index: -1;
+                top: 3px;
+                @media #{$md}{
+                    right: 180px;
+                }
+                @media #{$sm}{
+                    right: 50px;
+                }
+                @media #{$xs}{
+                    right: 0px;
+                }
+                img{
+                    margin-bottom: 0px;
+                    border:0;
+                    border-radius: 0;
+                }
+            }
+        }
+        .bottom-caption{
+            span{
+                color:#daad9e;
+                letter-spacing: 10px;
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 15px;
+                display: block;
+            }
+            
+            p{
+                color: #090908;
+            }
+        }
+    }
+}
